@@ -1,0 +1,226 @@
+/* import google fonts - jost, montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100..900&family=Montserrat+Alternates:wght@600;700;800&display=swap");
+
+/* CSS Variables */
+:root {
+  /* Colors */
+  --hue: 165;
+  --first-color: hsl(var(--hue), 60%, 40%);
+  --title-color: hsl(var(--hue), 4%, 12%);
+  --text-color: hsl(var(--hue), 4%, 20%);
+  --body-color: hsl(var(--hue), 30%, 92%);
+  --container-color: hsl(0, 0%, 100%);
+  --border-color: hsl(var(--hue), 4%, 16%);
+  --white-color: hsl(0, 0%, 100%);
+  --shadow-color: hsla(var(--hue), 80%, 10%, 0.2);
+
+  /* Font Family */
+  --body-font: "Jost", sans-serif;
+  --second-font: "Montserrat Alternates", sans-serif;
+
+  /* Font Sizes */
+  --big-font-size: 5.5rem;
+  --h1-font-size: 2.75rem;
+  --h2-font-size: 1.75rem;
+  --h3-font-size: 1.5rem;
+  --larger-font-size: 1.25rem;
+  --large-font-size: 1.125rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.8125rem;
+
+  /* Font Weights */
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  --font-black: 800;
+
+  /* Transition */
+  --transition: cubic-bezier(0.3, 0, 0.3, 1);
+
+  /* Responsive typography */
+  @media screen and (max-width: 1024px) {
+  }
+}
+
+/* Base CSS */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+}
+
+body {
+  background-color: var(--body-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--second-font);
+  font-weight: var(--font-bold);
+  color: var(--title-color);
+}
+
+ul {
+  list-style: none; /* Remove default bullets */
+}
+
+/* Remove default underline from links */
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.container {
+  max-width: 1320px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.social_links {
+  display: inline-flex;
+  column-gap: 1.25rem;
+}
+
+.social_link {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  transition: color 0.7s var(--transition);
+}
+
+.social_link:hover {
+  color: var(--first-color);
+}
+
+/* Header and Nav */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent;
+}
+
+.nav_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  max-width: 1540px;
+}
+
+.nav_logo,
+.nav_link {
+  color: var(--title-color);
+  font-weight: var(--font-bold);
+}
+
+.nav_logo {
+  font-family: var(--second-font);
+  font-size: var(--h3-font-size);
+}
+
+.nav_buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 1.75rem;
+}
+
+.nav_settings,
+.nav_toggle {
+  cursor: pointer;
+}
+
+.nav-settings {
+  font-size: 1.5rem;
+}
+
+.nav_toggle {
+  width: 28px;
+  height: 28px;
+  position: relative;
+}
+
+.nav_toggle::before,
+.nav_toggle::after {
+  content: "";
+  position: absolute;
+  background-color: var(--title-color);
+  width: 100%;
+  height: 2px;
+  left: 0;
+  transition: all 0.7s var(--transition);
+}
+
+.nav_toggle::before {
+  top: 7px;
+}
+
+.nav_toggle::after {
+  bottom: 7px;
+}
+
+.nav_menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 512px;
+  height: 100%;
+  background-color: var(--container-color);
+  padding: 9rem 0 0 9.5rem;
+  transition: right 1s var(--transition);
+}
+
+.nav_list {
+  margin-bottom: 2.5rem;
+}
+
+.nav_item {
+  margin-bottom: 1.25rem;
+}
+
+.nav_link {
+  font-size: var(--larger-font-size);
+  transition: color 0.3s var(--transition);
+}
+
+.nav_link:hover {
+  color: var(--first-color);
+}
+
+.show_menu {
+  right: 0;
+}
+
+.animate_toggle::before {
+  top: 14px;
+  transform: rotate(45deg);
+}
+.animate_toggle::after {
+  bottom: 12px;
+  transform: rotate(-45deg);
+}
