@@ -9,6 +9,11 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>My Portfolio Website - Alicia Makena</title>
   </head>
   <body>
@@ -125,6 +130,83 @@
           </div>
         </div>
       </section>
+
+      <!-- Services Section -->
+      <section class="services section">
+        <h2 class="section-title" data-title="My Services">What I Do</h2>
+
+        <div class="container">
+          <!--
+            Create a slider using swiper js
+          -->
+          <div class="swiper services-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide card">
+                <h4 class="services-subtitle">Web Development</h4>
+                <h3 class="services-title">Web Design And Logo</h3>
+                <p class="services-description">
+                  Web Designers craft the overall vision and plan for a website
+                  layout. Professional Logo Development: Business, Company or
+                  Personal.
+                </p>
+
+                <a href="" class="link"
+                  >See Pricing <i class="ri-arrow-right-line link-icon"></i
+                ></a>
+              </div>
+              <div class="swiper-slide card">
+                <h4 class="services-subtitle">App Development</h4>
+                <h3 class="services-title">iOS & Android</h3>
+                <p class="services-description">
+                  Design software applications to run on mobile devices. Modern
+                  and mobile ready applications that will help reach all of your
+                  target audience.
+                </p>
+
+                <a href="" class="link"
+                  >See Pricing <i class="ri-arrow-right-line link-icon"></i
+                ></a>
+              </div>
+              <div class="swiper-slide card">
+                <h4 class="services-subtitle">Game Development</h4>
+                <h3 class="services-title">Unity & Unreal Engine</h3>
+                <p class="services-description">
+                  Developing unique mobile android and iOS games.
+                </p>
+
+                <a href="" class="link"
+                  >See Pricing <i class="ri-arrow-right-line link-icon"></i
+                ></a>
+              </div>
+              <div class="swiper-slide card">
+                <h4 class="services-subtitle">Music Writing</h4>
+                <h3 class="services-title">Sound Track</h3>
+                <p class="services-description">
+                  Music writing, transcription and composition services.
+                </p>
+
+                <a href="" class="link"
+                  >See Pricing <i class="ri-arrow-right-line link-icon"></i
+                ></a>
+              </div>
+              <div class="swiper-slide card">
+                <h4 class="services-subtitle">Advertising</h4>
+                <h3 class="services-title">Google Ads</h3>
+                <p class="services-description">
+                  Advertising Services include; Google search result pages, You
+                  Tube etcetera.
+                </p>
+
+                <a href="" class="link"
+                  >See Pricing <i class="ri-arrow-right-line link-icon"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- STYLE SWITCHER -->
@@ -191,6 +273,9 @@
         <i class="ri-close-line"></i>
       </div>
     </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="assets/js/main.js"></script>
   </body>

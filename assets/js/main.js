@@ -46,3 +46,23 @@ document.querySelectorAll('input[name="body-theme"]').forEach((input) => {
     document.body.className = currentTheme;
   });
 });
+
+/* Services Swiper */
+var servicesSwiper = new Swiper(".services-swiper", {
+  spaceBetween: 32,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  breakpoints: {
+    /* when screen size is larger than 768px we will show 2 slides per view */
+    768: {
+      slidesPerView: 2,
+    },
+    /* when screen size is larger than 1208px we will show 3 slides per view */
+    1208: {
+      slidesPerView: 3,
+    },
+  },
+});
