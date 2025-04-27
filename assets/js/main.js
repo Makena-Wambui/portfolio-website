@@ -7,6 +7,26 @@ navToggle.addEventListener("click", () => {
   navToggle.classList.toggle("animate-toggle");
 });
 
+/* Mixitup Filter for Portfolio */
+var mixer = mixitup("#work-container", {
+  selectors: {
+    target: ".mix",
+  },
+  animation: {
+    duration: 300,
+  },
+});
+
+/* Active Project */
+const linkWork = document.querySelectorAll(".work-item");
+
+function activeProject() {
+  linkWork.forEach((l) => l.classList.remove("active-work"));
+  this.classList.add("active-work");
+}
+
+linkWork.forEach((l) => l.addEventListener("click", activeProject));
+
 /* Style Switcher */
 const styleSwitcher = document.getElementById("style-switcher");
 
