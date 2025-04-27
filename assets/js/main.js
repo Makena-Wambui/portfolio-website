@@ -27,6 +27,36 @@ function activeProject() {
 
 linkWork.forEach((l) => l.addEventListener("click", activeProject));
 
+/* Resume */
+const accordionItems = document.querySelectorAll(".resume-item");
+
+accordionItems.forEach((item) => {
+  const header = item.querySelector(".resume-header");
+
+  const content = item.querySelector(".resume-content");
+
+  const icon = item.querySelector(".resume-icon i");
+
+  header.addEventListener("click", () => {
+    const isOpen = item.classList.toggle("accordion-open");
+
+    content.style.height = isOpen ? content.scrollHeight + "px" : 0;
+
+    icon.className = isOpen ? "ri-subtract-line" : "ri-add-line";
+
+    accordionItems.forEach((otherItem) => {
+      if (
+        otherItem !== item &&
+        otherItem.classList.contains("accordion-open")
+      ) {
+        otherItem.querySelector(".resume-content").style.height = "0";
+        otherItem.querySelector(".resume-icon i").classList = "ri-add-line";
+        otherItem.classList.remove("accordion-open");
+      }
+    });
+  });
+});
+
 /* Style Switcher */
 const styleSwitcher = document.getElementById("style-switcher");
 
