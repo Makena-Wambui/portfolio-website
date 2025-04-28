@@ -57,6 +57,68 @@ accordionItems.forEach((item) => {
   });
 });
 
+/* Email JS */
+const contactForm = document.getElementById("contact-form");
+const contactName = document.getElementById("contact-name");
+const contactEmail = document.getElementById("contact-email");
+const contactSubject = document.getElementById("contact-subject");
+const contactMessage = document.getElementById("contact-message");
+const message = document.getElementById("message");
+
+const sendEmail = (e) => {
+  e.preventDefault(); // prevent the default behavior of the form
+
+  // Check if any of the fields are empty
+  if (
+    contactName.value === "" ||
+    contactEmail.value === "" ||
+    contactSubject.value === "" ||
+    contactMessage.value === ""
+  ) {
+    message.classList.remove("color-first");
+    message.classList.add("color-red");
+
+    message.textContent = "Please fill in all fields";
+
+    // Remove the error message after 3 seconds
+    setTimeout(() => {
+      message.textContent = "";
+    }, 3000);
+  } else {
+    emailjs
+      .sendForm(
+        "service_u0fnrt8",
+        "template_bnhi53j",
+        "#contact-form",
+        "hLz8l5JmoQ5qN6RPn"
+      )
+      .then(
+        () => {
+          message.classList.add("color-first");
+
+          message.textContent = "Message sent successfully";
+
+          // Remove the success message after 5 seconds
+          setTimeout(() => {
+            message.textContent = "";
+          }, 5000);
+
+          /* Clear the form fields */
+          contactName.value = "";
+          contactEmail.value = "";
+          contactSubject.value = "";
+          contactMessage.value = "";
+        },
+        (error) => {
+          alert("OOPS! Something went wrong, please try again...", error);
+        }
+      );
+  }
+};
+
+// Add event listener to the form
+contactForm.addEventListener("submit", sendEmail);
+
 /* Style Switcher */
 const styleSwitcher = document.getElementById("style-switcher");
 
@@ -99,6 +161,26 @@ document.querySelectorAll('input[name="body-theme"]').forEach((input) => {
 
 /* Services Swiper */
 var servicesSwiper = new Swiper(".services-swiper", {
+  spaceBetween: 32,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  breakpoints: {
+    /* when screen size is larger than 768px we will show 2 slides per view */
+    768: {
+      slidesPerView: 2,
+    },
+    /* when screen size is larger than 1208px we will show 3 slides per view */
+    1208: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+/* Testimonials Swiper */
+var servicesSwiper = new Swiper(".testimonials-swiper", {
   spaceBetween: 32,
   pagination: {
     el: ".swiper-pagination",
