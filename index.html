@@ -17,7 +17,7 @@
     <title>My Portfolio Website - Alicia Makena</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <nav class="nav container">
         <!-- Add the logo -->
         <a href="#" class="nav-logo">Alicia</a>
@@ -25,15 +25,27 @@
         <!-- Add the menu icon -->
         <div class="nav-menu" id="nav-menu">
           <ul class="nav-list">
-            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Skills</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Works</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Resume</a></li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Testimonials</a>
+              <a href="#home" class="nav-link active-link">Home</a>
             </li>
-            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            <li class="nav-item">
+              <a href="#services" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="#skills" class="nav-link">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a href="#portfolio" class="nav-link">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#resume" class="nav-link">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a href="#testimonials" class="nav-link">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
           </ul>
           <!-- Social Links -->
           <div class="social-links">
@@ -47,6 +59,8 @@
               ><i class="ri-twitter-x-fill"></i
             ></a>
           </div>
+
+          <div class="section-deco deco-left header-deco"></div>
         </div>
 
         <div class="nav-buttons">
@@ -61,19 +75,16 @@
 
     <main class="main">
       <!-- Home Section -->
-      <section class="home section">
+      <section class="home section" id="home">
         <div class="home-container container">
           <div class="home-content">
             <h2 class="home-subtitle">Hello, <span>My Name is</span></h2>
-            <h1 class="home-title"><span>Alicia</span> Makena</h1>
-            <h3 class="home-job">
-              Software Engineer, Web Developer and Designer
-            </h3>
+            <h1 class="home-title"><span>Alicia</span></h1>
+            <h3 class="home-job">Developer, Designer And Software Engineer</h3>
             <p class="home-description">
-              I create delightful and intuitive digital experiences. I have a
-              strong foundation in design principles and a keen eye for detail.
-              I translate complex ideas into user friendly interfaces that
-              captivate and engage.
+              I create delightful and intuitive digital experiences. I translate
+              complex ideas into user friendly interfaces that captivate and
+              engage.
             </p>
 
             <!-- Social Links -->
@@ -97,6 +108,9 @@
             </div>
           </div>
 
+          <!-- Container Element -->
+          <div class="section-deco deco-left"></div>
+
           <div class="home-banner">
             <div class="home-img-wrapper">
               <img
@@ -119,7 +133,7 @@
       </section>
 
       <!-- Services Section -->
-      <section class="services section">
+      <section class="services section" id="services">
         <h2 class="section-title" data-title="My Services">What I Do</h2>
 
         <div class="container">
@@ -192,11 +206,13 @@
 
             <div class="swiper-pagination"></div>
           </div>
+
+          <div class="section-deco deco-right"></div>
         </div>
       </section>
 
       <!-- Skills Section -->
-      <section class="skills section">
+      <section class="skills section" id="skills">
         <h2 class="section-title" data-title="My Talents">
           Professional Skills
         </h2>
@@ -297,11 +313,13 @@
               <span class="skills-percentage" style="width: 80%"></span>
             </div>
           </div>
+
+          <div class="section-deco deco-left"></div>
         </div>
       </section>
 
       <!--Portfolio -->
-      <section class="work section">
+      <section class="work section" id="portfolio">
         <h2 class="section-title" data-title="My Projects">Portfolio</h2>
 
         <div class="container">
@@ -388,7 +406,7 @@
                 />
 
                 <h4 class="work-category">Development</h4>
-                <h3 class="work-title">Wear</h3>
+                <h3 class="work-title">Vêtements</h3>
 
                 <p class="work-description">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -446,11 +464,13 @@
               </div>
             </div>
           </div>
+
+          <div class="section-deco deco-right"></div>
         </div>
       </section>
 
       <!--Resume -->
-      <section class="resume section">
+      <section class="resume section" id="resume">
         <h2 class="section-title" data-title="My Story">Resume</h2>
 
         <div class="resume-container container grid">
@@ -577,11 +597,13 @@
               </div>
             </div>
           </div>
+
+          <div class="section-deco deco-left"></div>
         </div>
       </section>
 
       <!--Testimonials -->
-      <section class="testimonials section">
+      <section class="testimonials section" id="testimonials">
         <h2 class="section-title" data-title="What My Customers Say">
           Testimonials
         </h2>
@@ -697,11 +719,13 @@
 
             <div class="swiper-pagination"></div>
           </div>
+
+          <div class="section-deco deco-right"></div>
         </div>
       </section>
 
       <!-- Contact Section -->
-      <section class="contact section">
+      <section class="contact section" id="contact">
         <h2 class="section-title" data-title="Let's Talk">Contact Me</h2>
         <div class="contact-container container grid">
           <div class="contact-content">
@@ -812,6 +836,8 @@
 
             <p class="message" id="message"></p>
           </form>
+
+          <div class="section-deco deco-left"></div>
         </div>
       </section>
     </main>

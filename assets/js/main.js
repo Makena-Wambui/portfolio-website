@@ -87,7 +87,7 @@ const sendEmail = (e) => {
   } else {
     emailjs
       .sendForm(
-        "service_u0fnrt8",
+        "service_bazoz6h",
         "template_bnhi53j",
         "#contact-form",
         "hLz8l5JmoQ5qN6RPn"
@@ -158,6 +158,52 @@ document.querySelectorAll('input[name="body-theme"]').forEach((input) => {
     document.body.className = currentTheme;
   });
 });
+
+/* Hide Menu Mobile */
+const navLink = document.querySelectorAll(".nav-link");
+
+const linkAction = () => {
+  const navMenu = document.getElementById("nav-menu");
+
+  navToggle.classList.remove("animate-toggle");
+  navMenu.classList.remove("show-menu");
+};
+
+navLink.forEach((n) => n.addEventListener("click", linkAction));
+
+/* Change header as you scroll */
+const scrollHeader = () => {
+  const header = document.getElementById("header");
+
+  window.scrollY >= 20
+    ? header.classList.add("bg-header")
+    : header.classList.remove("bg-header");
+};
+
+window.addEventListener("scroll", scrollHeader);
+
+const sections = document.querySelectorAll("section[id]");
+
+/* Active Link */
+const scrollActive = () => {
+  const scrollY = window.pageYOffset;
+
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 58;
+    const sectionId = current.getAttribute("id");
+    const sectionsClass = document.querySelector(
+      `.nav-menu a[href*=${sectionId}]`
+    );
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      sectionsClass.classList.add("active-link");
+    } else {
+      sectionsClass.classList.remove("active-link");
+    }
+  });
+};
+window.addEventListener("scroll", scrollActive);
 
 /* Services Swiper */
 var servicesSwiper = new Swiper(".services-swiper", {
